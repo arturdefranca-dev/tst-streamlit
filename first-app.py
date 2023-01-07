@@ -1,6 +1,8 @@
 # streamlit_app.py
-
+from os import write
 import streamlit as st
+
+st.title("Incluir cliente")
 
 with st.form(key="include_cliente"):
   input_name = st.text_input(label="Insira o seu nome")
