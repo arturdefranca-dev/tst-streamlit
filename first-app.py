@@ -1,11 +1,11 @@
 # streamlit_app.py
 
 import streamlit as st
-import sqlite3
 
-st.write("Olá!")
-
-conn = sqlite3.connect("data.db")
-c = conn.cursor()
-
+with st.form(key="include_cliente"):
+  input_name = st.text_input(label="Insira o seu nome")
+  input_age = st.number_input(label="Insira sua idade", format="%d", step=1)
+  input_occupatio = st.selectbox(label="Selecione sua profissão", options=["Desenvolvedor","Músico","Designer","Professor"])
+  input_button_submit = st.form_submit_button("Enviar")
+                                 
 
