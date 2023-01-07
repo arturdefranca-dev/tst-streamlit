@@ -8,7 +8,7 @@ with st.form(key="include_cliente"):
   input_occupation = st.selectbox(label="Selecione sua profissão", options=["Desenvolvedor","Músico","Designer","Professor"])
   input_button_submit = st.form_submit_button("Enviar")
                                  
-with input_button_submit:
+if input_button_submit:
   st.write(f'Nome: {input_name}')
   st.write(f'Idade: {input_age}')
   st.write(f'Profissão: {input_occupation}')
